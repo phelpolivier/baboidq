@@ -1,6 +1,6 @@
 # Baboidiguê, a API mais forte!
 
-<h2>Integrantes:</h2> <br>
+<h2>Integrantes:</h2>
 Phelipe Estevam Lins - DELETE <br>
 Giovanni Barreto Pedro - lead <br>
 Pedro Bazante Marques - <br>
