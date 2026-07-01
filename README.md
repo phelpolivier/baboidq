@@ -8,4 +8,6 @@ Miguel Batista da Silva - POST <br>
 Miguel Lavoisier - GET <br>
 Ian Pendek Zoega - PUT <br> <br>
 
-<img width="850" height="500" alt="image" src="https://github.com/user-attachments/assets/b4b5d699-e860-4b2a-9cb7-b711762b2d6f" />
+<img width="850" height="500" alt="image" src="https://github.com/user-attachments/assets/b4b5d699-e860-4b2a-9cb7-b711762b2d6f" /> 
+<img width="637" height="872" alt="image" src="https://github.com/user-attachments/assets/abac5a68-86b2-4591-921f-c19a9a01eadc" />
+
