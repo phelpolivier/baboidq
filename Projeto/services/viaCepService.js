@@ -1,0 +1,1 @@
+const resposta = await fetch // a API externa via cep deve ser colocada e ajustada nesse código por favor verificar a documentação dela breviamente para aplica-la
