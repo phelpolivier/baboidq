@@ -1,6 +1,36 @@
+const fs = require("fs");
+const funcionarios = require("../../database/funcionarios.json");
+
+// Função para atualizar um funcionário (PUT)
+exports.atualizarFuncionario = (req, res) => {
+    const id = parseInt(req.params.id);
+    const dadosAtualizados = req.body; // Dados enviados no corpo da requisição
+
+    // Encontrar o índice do funcionário no array
+    const indice = funcionarios.findIndex(f => f.id === id);
+
+    if (indice === -1) {
+        return res.status(404).json({
+            mensagem: "Funcionário não encontrado."
+        });
+    }
+
+    // Atualizar os dados do funcionário
+    funcionarios[indice] = { ...funcionarios[indice], ...dadosAtualizados };
+
+    // Salvar as alterações no arquivo JSON
+    fs.writeFileSync(
+        "./database/funcionarios.json",
+        JSON.stringify(funcionarios, null, 2)
+    );
+
+    res.status(200).json({
+        mensagem: "Funcionário atualizado com sucesso.",
+        funcionario: funcionarios[indice]
+    });
+};
 
 // DELETE
-
 exports.deleteFuncionario = (req, res) => {
     const id = parseInt(req.params.id);
 
