@@ -1,5 +1,5 @@
 const fs = require("fs");
-const funcionarios = require("../../database/funcionarios.json");
+const funcionarios = require("../funcionarios.json");
 
 // POST /funcionarios - cria um novo funcionário
 exports.criarFuncionario = (req, res) => {
