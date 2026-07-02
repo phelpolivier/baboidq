@@ -4,7 +4,7 @@ const controller = require("../controllers/funcionariosControllers");
 
 router.post("/", controller.criarFuncionario);
 
-router.delete("/:id", controller.deletarFuncionario);
+router.delete("/:id", controller.deleteFuncionario);
 
 router.get("/:id", controller.buscarFuncionario);
 
