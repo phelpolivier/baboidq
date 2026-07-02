@@ -1,5 +1,12 @@
 const fs = require("fs");
+const path = require("path");
+
+const caminhoArquivo = path.join(__dirname, "../funcionarios.json");
 const funcionarios = require("../funcionarios.json");
+
+function salvar() {
+    fs.writeFileSync(caminhoArquivo, JSON.stringify(funcionarios, null, 2));
+}
 
 // POST /funcionarios - cria um novo funcionário
 exports.criarFuncionario = (req, res) => {
