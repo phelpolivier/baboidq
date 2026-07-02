@@ -1,6 +1,5 @@
 const resposta = await fetch // a API externa via cep deve ser colocada e ajustada nesse código por favor verificar a documentação dela breviamente para aplica-la
 
-<script>
     function limpa_formulário_cep() {
         document.getElementById("rua").value = "";
         document.getElementById("bairro").value = "";
@@ -59,4 +58,4 @@ const resposta = await fetch // a API externa via cep deve ser colocada e ajusta
             alert("Erro ao consultar o CEP.");
         }
     }
-</script>
+
