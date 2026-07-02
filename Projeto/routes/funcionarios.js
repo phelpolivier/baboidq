@@ -8,7 +8,7 @@ router.delete("/:id", controller.deletarFuncionario);
 
 router.get("/:id", controller.buscarFuncionario);
 
-router.get("/:id", controller.listarFuncionarios);
+router.get("/", controller.listarFuncionarios);
 
 router.put("/:id", controller.atualizarFuncionario);
 
