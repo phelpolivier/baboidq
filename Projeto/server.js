@@ -1,10 +1,10 @@
-const express = require = require("express");
+const express = require("express");
 
 const app = express();
 
 app.use(express.json());
 
-const funcionario = require("./routes/funcionarios");
+const funcionarioRoutes = require("./routes/funcionarios");
 
 app.use("/funcionarios", funcionarioRoutes);
 
