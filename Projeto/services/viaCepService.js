@@ -5,7 +5,6 @@ const resposta = await fetch // a API externa via cep deve ser colocada e ajusta
         document.getElementById("bairro").value = "";
         document.getElementById("cidade").value = "";
         document.getElementById("uf").value = "";
-        document.getElementById("ibge").value = "";
     }
 
     async function pesquisacep(valor) {
@@ -29,7 +28,6 @@ const resposta = await fetch // a API externa via cep deve ser colocada e ajusta
         document.getElementById("bairro").value = "...";
         document.getElementById("cidade").value = "...";
         document.getElementById("uf").value = "...";
-        document.getElementById("ibge").value = "...";
 
         try {
             const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
@@ -50,7 +48,6 @@ const resposta = await fetch // a API externa via cep deve ser colocada e ajusta
             document.getElementById("bairro").value = conteudo.bairro;
             document.getElementById("cidade").value = conteudo.localidade;
             document.getElementById("uf").value = conteudo.uf;
-            document.getElementById("ibge").value = conteudo.ibge;
 
         } catch (erro) {
             limpa_formulário_cep();
