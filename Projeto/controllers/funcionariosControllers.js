@@ -20,6 +20,23 @@ exports.criarFuncionario = (req, res) => {
     res.status(201).json(novoFuncionario);
 };
 
+// GET /funcionarios - lista todos os funcionários
+exports.listarFuncionarios = (req, res) => {
+    res.status(200).json(funcionarios);
+};
+
+// GET /funcionarios/:id - busca um funcionário pelo id
+exports.buscarFuncionario = (req, res) => {
+    const id = parseInt(req.params.id);
+    const funcionario = funcionarios.find(f => f.id === id);
+
+    if (!funcionario) {
+        return res.status(404).json({ mensagem: "Funcionário não encontrado." });
+    }
+
+    res.status(200).json(funcionario);
+};
+
 // Função para atualizar um funcionário (PUT)
 exports.atualizarFuncionario = (req, res) => {
     const id = parseInt(req.params.id);
