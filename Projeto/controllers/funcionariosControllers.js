@@ -1,6 +1,25 @@
 const fs = require("fs");
 const funcionarios = require("../../database/funcionarios.json");
 
+// POST /funcionarios - cria um novo funcionário
+exports.criarFuncionario = (req, res) => {
+    const dados = req.body;
+
+    if (!dados || !dados.nome) {
+        return res.status(400).json({ erro: "Dados inválidos" });
+    }
+
+    const novoId = funcionarios.length > 0
+        ? Math.max(...funcionarios.map(f => f.id)) + 1
+        : 1;
+
+    const novoFuncionario = { id: novoId, ...dados };
+    funcionarios.push(novoFuncionario);
+    salvar();
+
+    res.status(201).json(novoFuncionario);
+};
+
 // Função para atualizar um funcionário (PUT)
 exports.atualizarFuncionario = (req, res) => {
     const id = parseInt(req.params.id);
